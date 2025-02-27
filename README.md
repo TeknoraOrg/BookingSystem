@@ -1,4 +1,43 @@
 # BookingSystem
+## 🛠 1️⃣ Setup in GitHub Codespaces
+### **🔹 Open Codespace**
+1. Go to your GitHub repository.
+2. Click on **"Code"** → **"Codespaces"** → **"Create codespace on main"**.
+3. Wait for the Codespace to initialize.
+
+### **🔹 Install Dependencies & Start Servers**
+```sh
+cd backend
+npm install
+npm start &
+cd ../frontend
+npm install
+npm run dev -- --host
+```
+
+---
+
+## 📂 2️⃣ Project Folder Structure
+```
+/booking-system
+│── backend/ (Node.js API)
+│   │── server.js
+│   │── package.json
+│   │── .env (Environment Variables)
+│   │── routes/
+│   │── models/
+│── frontend/ (React + Vite.js App)
+│   │── src/
+│   │── index.js
+│   │── App.jsx
+│   │── package.json
+│── docker-compose.yml (Database setup)
+│── README.md (This file)
+```
+
+---
+## 📜 3️⃣ System Requirements Specification (SRS)
+
 ### **📌 Scope**
 This system will cover:
 - **User Registration & Authentication**
@@ -109,3 +148,9 @@ It targets **small to medium-sized service providers** across various industries
 - **Mobile app support for Android & iOS**.
 
 ---
+
+
+## 📅 4️⃣  Tech Stack Used
+- **Frontend:** React (Vite.js) + TailwindCSS (for basic UI)
+- **Backend:** Node.js + Express.js
+- **Database:** MySQL (with migrations)
