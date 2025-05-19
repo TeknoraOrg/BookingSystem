@@ -142,5 +142,277 @@
     "emailInvalid": "Please enter a valid email",
     "phoneRequired": "Phone number is required",
     "serviceRequired": "Please select a service"
+  },
+
+  "settings": {
+    "title": "Settings",
+    "saveSuccess": "Settings saved successfully!",
+    "resetToDefaults": "Reset to Defaults",
+    "saveChanges": "Save Changes",
+    "saving": "Saving...",
+    "sections": {
+      "notifications": "Notifications",
+      "business": "Business",
+      "appearance": "Appearance",
+      "integrations": "Integrations",
+      "security": "Security"
+    },
+    "notifications": {
+      "title": "Notification Preferences",
+      "emailNotifications": {
+        "title": "Email Notifications",
+        "description": "Professional, branded emails with all appointment details and business information.",
+        "enable": "Enable Email Notifications",
+        "newBookings": "New Bookings",
+        "cancellations": "Cancellations",
+        "reminders": "Appointment Reminders"
+      },
+      "smsReminders": {
+        "title": "SMS Reminders",
+        "description": "Timely text messages with just the right information and quick confirmation options.",
+        "enable": "Enable SMS Reminders",
+        "clientReminders": "Client Reminders",
+        "staffReminders": "Staff Reminders",
+        "timeBeforeAppointment": "Send reminder (hours before)",
+        "options": {
+          "1hour": "1 hour",
+          "2hours": "2 hours",
+          "4hours": "4 hours",
+          "24hours": "24 hours",
+          "48hours": "48 hours"
+        }
+      },
+      "pushNotifications": {
+        "title": "Push Notifications",
+        "description": "Instant notifications through your mobile app for clients who prefer this method.",
+        "enable": "Enable Push Notifications",
+        "browserNotifications": "Browser Notifications",
+        "mobileApp": "Mobile App",
+        "desktop": "Desktop Notifications"
+      },
+      "twoWayMessaging": {
+        "title": "Two-Way Messaging",
+        "description": "Enable direct conversations between staff and clients for questions and clarifications.",
+        "enable": "Enable Two-Way Messaging",
+        "autoResponder": "Auto Responder",
+        "businessHoursOnly": "Business Hours Only"
+      }
+    },
+    "business": {
+      "title": "Business Settings",
+      "businessInfo": {
+        "title": "Business Information",
+        "name": "Business Name",
+        "email": "Email",
+        "phone": "Phone",
+        "timezone": "Timezone",
+        "address": "Address",
+        "timezones": {
+          "eastern": "Eastern Time",
+          "central": "Central Time",
+          "mountain": "Mountain Time",
+          "pacific": "Pacific Time",
+          "london": "London",
+          "berlin": "Berlin",
+          "paris": "Paris",
+          "tokyo": "Tokyo"
+        }
+      },
+      "operatingHours": {
+        "title": "Operating Hours",
+        "days": {
+          "monday": "Monday",
+          "tuesday": "Tuesday",
+          "wednesday": "Wednesday",
+          "thursday": "Thursday",
+          "friday": "Friday",
+          "saturday": "Saturday",
+          "sunday": "Sunday"
+        },
+        "to": "to"
+      },
+      "bookingRules": {
+        "title": "Booking Rules",
+        "advanceBooking": "Advance Booking (hours)",
+        "cancellationPolicy": "Cancellation Policy (hours)",
+        "maxBookingsPerDay": "Max Bookings Per Day",
+        "allowDoubleBooking": "Allow Double Booking",
+        "requireConfirmation": "Require Confirmation"
+      }
+    },
+    "appearance": {
+      "title": "Appearance & Branding",
+      "branding": {
+        "title": "Branding",
+        "primaryColor": "Primary Color",
+        "secondaryColor": "Secondary Color",
+        "logoUpload": "Logo Upload",
+        "logoUploadText": "Click to upload logo or drag and drop",
+        "logoUploadFormats": "PNG, JPG, SVG up to 2MB"
+      },
+      "theme": {
+        "title": "Theme Settings",
+        "mode": "Theme Mode",
+        "light": "Light",
+        "dark": "Dark",
+        "auto": "Auto",
+        "customCSS": "Custom CSS",
+        "customCSSPlaceholder": "/* Add your custom CSS here */"
+      },
+      "bookingPage": {
+        "title": "Booking Page Settings",
+        "layout": "Layout Style",
+        "layoutOptions": {
+          "modern": "Modern",
+          "classic": "Classic",
+          "minimal": "Minimal"
+        },
+        "customMessage": "Custom Welcome Message",
+        "showBusinessInfo": "Show Business Information",
+        "termsAndConditions": "Require Terms & Conditions",
+        "privacyPolicy": "Require Privacy Policy Acceptance"
+      }
+    },
+    "integrations": {
+      "title": "Integrations",
+      "calendar": {
+        "title": "Calendar Integration",
+        "googleCalendar": "Google Calendar",
+        "outlookCalendar": "Outlook Calendar",
+        "appleCalendar": "Apple Calendar",
+        "synced": "Synced and active",
+        "notConnected": "Not connected",
+        "connect": "Connect",
+        "disconnect": "Disconnect"
+      },
+      "paymentGateways": {
+        "title": "Payment Gateways",
+        "stripe": {
+          "title": "Stripe",
+          "description": "Accept credit cards and digital payments",
+          "publicKey": "Public Key",
+          "secretKey": "Secret Key"
+        },
+        "paypal": {
+          "title": "PayPal",
+          "description": "Accept PayPal payments",
+          "clientId": "Client ID",
+          "clientSecret": "Client Secret"
+        }
+      },
+      "emailService": {
+        "title": "Email Service",
+        "provider": "Email Provider",
+        "apiKey": "API Key",
+        "sendFromEmail": "Send From Email",
+        "sendFromName": "Send From Name",
+        "providers": {
+          "default": "Default (Built-in)",
+          "sendgrid": "SendGrid",
+          "mailchimp": "Mailchimp",
+          "awsSes": "AWS SES"
+        }
+      },
+      "webhooks": {
+        "title": "Webhooks",
+        "description": "Configure webhook URLs to receive real-time notifications about booking events.",
+        "newBooking": "New Booking Webhook",
+        "cancellation": "Cancellation Webhook",
+        "modification": "Modification Webhook",
+        "placeholders": {
+          "newBooking": "https://your-app.com/webhooks/new-booking",
+          "cancellation": "https://your-app.com/webhooks/cancellation",
+          "modification": "https://your-app.com/webhooks/modification"
+        }
+      }
+    },
+    "security": {
+      "title": "Security Settings",
+      "authentication": {
+        "title": "Authentication",
+        "twoFactorAuth": {
+          "title": "Two-Factor Authentication",
+          "description": "Add an extra layer of security to your account"
+        },
+        "passwordPolicy": {
+          "title": "Password Policy",
+          "weak": "Weak (8+ characters)",
+          "medium": "Medium (8+ characters, numbers, symbols)",
+          "strong": "Strong (12+ characters, mixed case, numbers, symbols)"
+        },
+        "sessionTimeout": "Session Timeout (minutes)"
+      },
+      "dataProtection": {
+        "title": "Data Protection",
+        "dataRetention": {
+          "title": "Data Retention Period (days)",
+          "description": "How long to keep booking data before automatic deletion"
+        },
+        "autoDeleteCancelled": {
+          "title": "Auto-delete Cancelled Bookings",
+          "description": "Automatically remove cancelled bookings after 30 days"
+        },
+        "encryptSensitiveData": {
+          "title": "Encrypt Sensitive Data",
+          "description": "Encrypt personal information in database"
+        },
+        "gdprCompliance": {
+          "title": "GDPR Compliance",
+          "description": "Enable GDPR compliance features"
+        }
+      },
+      "accessControl": {
+        "title": "Access Control",
+        "allowedIPs": {
+          "title": "Allowed IP Addresses",
+          "placeholder": "Enter IP addresses, one per line (leave empty to allow all)"
+        },
+        "blockSuspiciousActivity": {
+          "title": "Block Suspicious Activity",
+          "description": "Automatically block IP addresses with suspicious behavior"
+        },
+        "loginAttempts": {
+          "title": "Max Login Attempts",
+          "description": "Number of failed login attempts before account is locked"
+        }
+      }
+    }
+  },
+  "app": {
+    "title": "BookMe",
+    "clientView": "Client View",
+    "adminView": "Admin View"
+  },
+  "adminPanel": {
+    "dashboard": {
+      "todaysAppointments": "Today's Appointments",
+      "pendingConfirmations": "Pending Confirmations",
+      "totalBookings": "Total Bookings (Month)",
+      "revenue": "Revenue (Month)",
+      "bookingTrends": "Booking Trends",
+      "bookings": "Bookings",
+      "revenueLabel": "Revenue",
+      "recentActivity": "Recent Activity",
+      "noRecentActivity": "No recent activity to display.",
+      "completionRate": "Completion Rate",
+      "cancellationsToday": "Cancellations Today",
+      "dataResetSuccess": "Data has been successfully reset to the initial demo data."
+    },
+    "header": {
+      "buttons": {
+        "resetData": "Reset Data",
+        "refreshData": "Refresh Data"
+      },
+      "search_placeholder": "Search...",
+      "profile": {
+        "admin": "Admin",
+        "dropdown": {
+          "clientView": "Client View",
+          "profileSettings": "Profile Settings",
+          "logout": "Logout"
+        }
+      }
+    }
   }
 }
+

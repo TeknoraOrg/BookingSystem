@@ -142,5 +142,277 @@
     "emailInvalid": "Bitte geben Sie eine gültige E-Mail ein",
     "phoneRequired": "Telefonnummer ist erforderlich",
     "serviceRequired": "Bitte wählen Sie eine Dienstleistung"
+  },
+
+  "settings": {
+    "title": "Einstellungen",
+    "saveSuccess": "Einstellungen erfolgreich gespeichert!",
+    "resetToDefaults": "Auf Standard zurücksetzen",
+    "saveChanges": "Änderungen speichern",
+    "saving": "Speichern...",
+    "sections": {
+      "notifications": "Benachrichtigungen",
+      "business": "Unternehmen",
+      "appearance": "Erscheinungsbild",
+      "integrations": "Integrationen",
+      "security": "Sicherheit"
+    },
+    "notifications": {
+      "title": "Benachrichtigungseinstellungen",
+      "emailNotifications": {
+        "title": "E-Mail-Benachrichtigungen",
+        "description": "Professionelle, markengerechte E-Mails mit allen Termindetails und Unternehmensinformationen.",
+        "enable": "E-Mail-Benachrichtigungen aktivieren",
+        "newBookings": "Neue Buchungen",
+        "cancellations": "Stornierungen",
+        "reminders": "Termin-Erinnerungen"
+      },
+      "smsReminders": {
+        "title": "SMS-Erinnerungen",
+        "description": "Rechtzeitige Textnachrichten mit den richtigen Informationen und schnellen Bestätigungsoptionen.",
+        "enable": "SMS-Erinnerungen aktivieren",
+        "clientReminders": "Kunden-Erinnerungen",
+        "staffReminders": "Personal-Erinnerungen",
+        "timeBeforeAppointment": "Erinnerung senden (Stunden vorher)",
+        "options": {
+          "1hour": "1 Stunde",
+          "2hours": "2 Stunden",
+          "4hours": "4 Stunden",
+          "24hours": "24 Stunden",
+          "48hours": "48 Stunden"
+        }
+      },
+      "pushNotifications": {
+        "title": "Push-Benachrichtigungen",
+        "description": "Sofortige Benachrichtigungen über Ihre mobile App für Kunden, die diese Methode bevorzugen.",
+        "enable": "Push-Benachrichtigungen aktivieren",
+        "browserNotifications": "Browser-Benachrichtigungen",
+        "mobileApp": "Mobile App",
+        "desktop": "Desktop-Benachrichtigungen"
+      },
+      "twoWayMessaging": {
+        "title": "Bidirektionale Nachrichten",
+        "description": "Ermöglichen Sie direkte Gespräche zwischen Personal und Kunden für Fragen und Klärungen.",
+        "enable": "Bidirektionale Nachrichten aktivieren",
+        "autoResponder": "Automatische Antwort",
+        "businessHoursOnly": "Nur während Geschäftszeiten"
+      }
+    },
+    "business": {
+      "title": "Unternehmenseinstellungen",
+      "businessInfo": {
+        "title": "Unternehmensinformationen",
+        "name": "Unternehmensname",
+        "email": "E-Mail",
+        "phone": "Telefon",
+        "timezone": "Zeitzone",
+        "address": "Adresse",
+        "timezones": {
+          "eastern": "Ostküstenzeit",
+          "central": "Zentrale Zeit",
+          "mountain": "Bergzeit",
+          "pacific": "Pazifikzeit",
+          "london": "London",
+          "berlin": "Berlin",
+          "paris": "Paris",
+          "tokyo": "Tokio"
+        }
+      },
+      "operatingHours": {
+        "title": "Öffnungszeiten",
+        "days": {
+          "monday": "Montag",
+          "tuesday": "Dienstag",
+          "wednesday": "Mittwoch",
+          "thursday": "Donnerstag",
+          "friday": "Freitag",
+          "saturday": "Samstag",
+          "sunday": "Sonntag"
+        },
+        "to": "bis"
+      },
+      "bookingRules": {
+        "title": "Buchungsregeln",
+        "advanceBooking": "Vorlaufzeit für Buchungen (Stunden)",
+        "cancellationPolicy": "Stornierungsrichtlinie (Stunden)",
+        "maxBookingsPerDay": "Max. Buchungen pro Tag",
+        "allowDoubleBooking": "Doppelbuchungen erlauben",
+        "requireConfirmation": "Bestätigung erforderlich"
+      }
+    },
+    "appearance": {
+      "title": "Erscheinungsbild & Branding",
+      "branding": {
+        "title": "Branding",
+        "primaryColor": "Primärfarbe",
+        "secondaryColor": "Sekundärfarbe",
+        "logoUpload": "Logo hochladen",
+        "logoUploadText": "Klicken Sie zum Hochladen des Logos oder ziehen Sie es hierher",
+        "logoUploadFormats": "PNG, JPG, SVG bis zu 2MB"
+      },
+      "theme": {
+        "title": "Design-Einstellungen",
+        "mode": "Design-Modus",
+        "light": "Hell",
+        "dark": "Dunkel",
+        "auto": "Automatisch",
+        "customCSS": "Benutzerdefiniertes CSS",
+        "customCSSPlaceholder": "/* Fügen Sie hier Ihr benutzerdefiniertes CSS hinzu */"
+      },
+      "bookingPage": {
+        "title": "Buchungsseiten-Einstellungen",
+        "layout": "Layout-Stil",
+        "layoutOptions": {
+          "modern": "Modern",
+          "classic": "Klassisch",
+          "minimal": "Minimal"
+        },
+        "customMessage": "Benutzerdefinierte Begrüßungsnachricht",
+        "showBusinessInfo": "Unternehmensinformationen anzeigen",
+        "termsAndConditions": "AGBs erfordern",
+        "privacyPolicy": "Akzeptierung der Datenschutzerklärung erfordern"
+      }
+    },
+    "integrations": {
+      "title": "Integrationen",
+      "calendar": {
+        "title": "Kalender-Integration",
+        "googleCalendar": "Google Kalender",
+        "outlookCalendar": "Outlook Kalender",
+        "appleCalendar": "Apple Kalender",
+        "synced": "Synchronisiert und aktiv",
+        "notConnected": "Nicht verbunden",
+        "connect": "Verbinden",
+        "disconnect": "Trennen"
+      },
+      "paymentGateways": {
+        "title": "Zahlungsanbieter",
+        "stripe": {
+          "title": "Stripe",
+          "description": "Kreditkarten und digitale Zahlungen akzeptieren",
+          "publicKey": "Öffentlicher Schlüssel",
+          "secretKey": "Geheimer Schlüssel"
+        },
+        "paypal": {
+          "title": "PayPal",
+          "description": "PayPal-Zahlungen akzeptieren",
+          "clientId": "Client ID",
+          "clientSecret": "Client Secret"
+        }
+      },
+      "emailService": {
+        "title": "E-Mail-Dienst",
+        "provider": "E-Mail-Anbieter",
+        "apiKey": "API-Schlüssel",
+        "sendFromEmail": "Absender-E-Mail",
+        "sendFromName": "Absender-Name",
+        "providers": {
+          "default": "Standard (Eingebaut)",
+          "sendgrid": "SendGrid",
+          "mailchimp": "Mailchimp",
+          "awsSes": "AWS SES"
+        }
+      },
+      "webhooks": {
+        "title": "Webhooks",
+        "description": "Konfigurieren Sie Webhook-URLs, um Echtzeitbenachrichtigungen über Buchungsereignisse zu erhalten.",
+        "newBooking": "Neue Buchung Webhook",
+        "cancellation": "Stornierung Webhook",
+        "modification": "Änderung Webhook",
+        "placeholders": {
+          "newBooking": "https://ihre-app.com/webhooks/neue-buchung",
+          "cancellation": "https://ihre-app.com/webhooks/stornierung",
+          "modification": "https://ihre-app.com/webhooks/aenderung"
+        }
+      }
+    },
+    "security": {
+      "title": "Sicherheitseinstellungen",
+      "authentication": {
+        "title": "Authentifizierung",
+        "twoFactorAuth": {
+          "title": "Zwei-Faktor-Authentifizierung",
+          "description": "Fügen Sie eine zusätzliche Sicherheitsebene zu Ihrem Konto hinzu"
+        },
+        "passwordPolicy": {
+          "title": "Passwort-Richtlinie",
+          "weak": "Schwach (8+ Zeichen)",
+          "medium": "Mittel (8+ Zeichen, Zahlen, Symbole)",
+          "strong": "Stark (12+ Zeichen, Groß-/Kleinschreibung, Zahlen, Symbole)"
+        },
+        "sessionTimeout": "Sitzungszeitüberschreitung (Minuten)"
+      },
+      "dataProtection": {
+        "title": "Datenschutz",
+        "dataRetention": {
+          "title": "Datenaufbewahrungsdauer (Tage)",
+          "description": "Wie lange Buchungsdaten vor automatischer Löschung aufbewahrt werden"
+        },
+        "autoDeleteCancelled": {
+          "title": "Stornierte Buchungen automatisch löschen",
+          "description": "Stornierte Buchungen nach 30 Tagen automatisch entfernen"
+        },
+        "encryptSensitiveData": {
+          "title": "Sensible Daten verschlüsseln",
+          "description": "Persönliche Informationen in der Datenbank verschlüsseln"
+        },
+        "gdprCompliance": {
+          "title": "DSGVO-Konformität",
+          "description": "DSGVO-Compliance-Funktionen aktivieren"
+        }
+      },
+      "accessControl": {
+        "title": "Zugriffskontrolle",
+        "allowedIPs": {
+          "title": "Erlaubte IP-Adressen",
+          "placeholder": "Geben Sie IP-Adressen ein, eine pro Zeile (leer lassen für alle)"
+        },
+        "blockSuspiciousActivity": {
+          "title": "Verdächtige Aktivitäten blockieren",
+          "description": "IP-Adressen mit verdächtigem Verhalten automatisch blockieren"
+        },
+        "loginAttempts": {
+          "title": "Max. Anmeldeversuche",
+          "description": "Anzahl der fehlgeschlagenen Anmeldeversuche, bevor das Konto gesperrt wird"
+        }
+      }
+    }
+  },
+  "app": {
+    "title": "BookMe",
+    "clientView": "Kundenansicht",
+    "adminView": "Admin-Ansicht"
+  },
+  "adminPanel": {
+    "dashboard": {
+  "todaysAppointments": "Heutige Termine",
+  "pendingConfirmations": "Ausstehende Bestätigungen",
+  "totalBookings": "Gesamtbuchungen (Monat)",
+  "revenue": "Einnahmen (Monat)",
+  "bookingTrends": "Buchungstrends",
+  "bookings": "Buchungen",
+  "revenueLabel": "Einnahmen",
+  "recentActivity": "Letzte Aktivitäten",
+  "noRecentActivity": "Keine aktuellen Aktivitäten vorhanden.",
+  "completionRate": "Abschlussrate",
+  "cancellationsToday": "Stornierungen heute",
+  "dataResetSuccess": "Daten wurden erfolgreich auf die anfänglichen Demodaten zurückgesetzt."
+},
+    "header": {
+      "buttons": {
+        "resetData": "Daten zurücksetzen",
+        "refreshData": "Daten aktualisieren"
+      },
+      "search_placeholder": "Suchen...",
+      "profile": {
+        "admin": "Admin",
+        "dropdown": {
+          "clientView": "Kundenansicht",
+          "profileSettings": "Profileinstellungen",
+          "logout": "Abmelden"
+        }
+      }
+    }
   }
+
 }

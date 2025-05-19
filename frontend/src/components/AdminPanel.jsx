@@ -2,11 +2,13 @@
 import React, { useState, useEffect } from 'react';
 import BookingList from './BookingList';
 import AdminCalendar from './AdminCalendar';
+import Settings from './Settings'; // Import the new Settings component
 import { Line } from 'recharts';
 import { BookingService, DashboardService } from '../services/mockApiClient';
 import ThemeToggle from './ThemeToggle';
 import LanguageSelector from './LanguageSelector';
 import { useTranslation } from 'react-i18next'; 
+import '../i18n';
 
 const AdminPanel = ({ onViewChange }) => {
   // State for active tab and period selection
@@ -340,19 +342,7 @@ const AdminPanel = ({ onViewChange }) => {
       case 'calendar':
         return <AdminCalendar />;
       case 'settings':
-        return (
-          <div className="flex items-center justify-center h-96 rounded-lg shadow" style={{ backgroundColor: 'var(--surface)', color: 'var(--text-primary)' }}>
-            <div className="text-center p-6">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 mx-auto" style={{ color: 'var(--text-secondary)' }} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-              <h3 className="mt-4 text-lg font-medium" style={{ color: 'var(--text-primary)' }}>Settings Panel</h3>
-              <p className="mt-2" style={{ color: 'var(--text-secondary)' }}>This feature is under development!</p>
-              <button className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">Check Back Later</button>
-            </div>
-          </div>
-        );
+        return <Settings />; // Use the new Settings component
       default:
         return renderDashboard();
     }
@@ -444,7 +434,7 @@ const AdminPanel = ({ onViewChange }) => {
             <div className="relative">
               <input
                 type="text"
-                placeholder="Search..."
+                placeholder={t('adminPanel.header.search_placeholder')}
                 className="w-64 pl-10 pr-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 style={{ 
                   backgroundColor: 'var(--surface)', 
@@ -468,7 +458,7 @@ const AdminPanel = ({ onViewChange }) => {
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
               </svg>
-              Refresh Data
+              {t('adminPanel.header.buttons.refreshData')}
             </button>
             
             {/* Reset Data Button */}
@@ -478,20 +468,20 @@ const AdminPanel = ({ onViewChange }) => {
               className={`ml-4 px-3 py-2 rounded-md text-white flex items-center ${isResetting ? 'opacity-50 cursor-not-allowed' : ''}`}
               style={{ backgroundColor: '#ED8936' }}
             >
-              {isResetting ? (
+               {isResetting ? (
                 <>
                   <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                   </svg>
-                  Resetting...
+                  {t('adminPanel.header.buttons.resetting')}
                 </>
               ) : (
                 <>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                   </svg>
-                  Reset Data
+                  {t('adminPanel.header.buttons.resetData')}
                 </>
               )}
             </button>
@@ -505,7 +495,9 @@ const AdminPanel = ({ onViewChange }) => {
                   <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center">
                     <span className="font-medium">A</span>
                   </div>
-                  <span className="font-medium" style={{ color: 'var(--text-primary)' }}>Admin</span>
+                  <span className="font-medium" style={{ color: 'var(--text-primary)' }}>
+                    {t('adminPanel.header.profile.admin')}
+                  </span>
                   <svg className="w-4 h-4" style={{ color: 'var(--text-secondary)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
                   </svg>
@@ -531,21 +523,21 @@ const AdminPanel = ({ onViewChange }) => {
                       onViewChange('user');
                     }}
                   >
-                    Client View
+                    {t('adminPanel.header.profile.dropdown.clientView')}
                   </a>
                   <a 
                     href="#" 
                     className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
                     style={{ color: 'var(--text-primary)' }}
                   >
-                    Profile Settings
+                    {t('adminPanel.header.profile.dropdown.profileSettings')}
                   </a>
                   <a 
                     href="#" 
                     className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
                     style={{ color: 'var(--text-primary)' }}
                   >
-                    Logout
+                    {t('adminPanel.header.profile.dropdown.logout')}
                   </a>
                 </div>
               )}
