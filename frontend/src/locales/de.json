@@ -382,7 +382,7 @@
     "title": "BookMe",
     "clientView": "Kundenansicht",
     "adminView": "Admin-Ansicht"
-  },
+*/  },
   "adminPanel": {
     "dashboard": {
   "todaysAppointments": "Heutige Termine",
@@ -397,7 +397,8 @@
   "completionRate": "Abschlussrate",
   "cancellationsToday": "Stornierungen heute",
   "dataResetSuccess": "Daten wurden erfolgreich auf die anfänglichen Demodaten zurückgesetzt."
-},
+}-
+,
     "header": {
       "buttons": {
         "resetData": "Daten zurücksetzen",
